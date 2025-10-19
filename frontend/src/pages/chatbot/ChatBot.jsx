@@ -5,7 +5,7 @@ import './ChatBot.scss';
 import Header from '../../components/Header';
 
 const MODEL_NAME = 'gemini-pro';
-const API_KEY = 'AIzaSyDsZXccEjiiBb0Op7AXJOYO0iJAYeAYh_I'; 
+const API_KEY = ''; 
 
 function GeminiChat() {
   const [chatHistory, setChatHistory] = useState([]);
