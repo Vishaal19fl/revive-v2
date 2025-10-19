@@ -1,0 +1,138 @@
+.dashboard-box {
+  overflow-x: hidden; /* Prevent horizontal scrollbars */
+  overflow-y: auto; /* Allow vertical scrolling */
+}
+.marquee-section {
+  width: 120%;
+  margin-left: -30px;
+  height: 75px;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  margin-bottom: 10px;
+  background-color: #dc2626; /* fallback */
+  background-image: linear-gradient(90deg, #7f1d1d 0%, #dc2626 50%, #7f1d1d 100%);
+  color: #000000; /* Black text color */
+  position: relative;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+
+  @media (max-width: 768px) {
+    height: 50px; /* Adjust height for mobile */
+  }
+
+  @media (max-width: 480px) {
+    height: 40px; /* Further reduce height on small screens */
+  }
+}
+
+.breaking-news-label {
+  background: #0f0f0f; /* Red label for "Breaking News" */
+  color: #ffce2c; /* White text */
+  font-size: 18px;
+  font-weight: bold;
+  padding: 7px 15px;
+  text-transform: uppercase;
+  position: absolute;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 2;
+
+  @media (max-width: 768px) {
+    font-size: 14px; /* Adjust font size for mobile */
+    padding: 0 10px;
+  }
+
+  @media (max-width: 480px) {
+    font-size: 12px; /* Further reduce font size for smaller screens */
+    padding: 0 8px;
+  }
+}
+
+.text-gallery {
+  display: flex;
+  gap: 20px;
+  
+  white-space: nowrap; /* Keep text in a single line */
+  
+
+  @media (max-width: 768px) {
+    gap: 15px;
+    animation-duration: 8s; /* Faster scrolling for smaller screens */
+  }
+
+  @media (max-width: 480px) {
+    gap: 10px;
+    animation-duration: 6s; /* Even faster scrolling */
+  }
+}
+
+.text-gallery-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 0 20px;
+  
+
+  @media (max-width: 768px) {
+    padding: 0 15px;
+  }
+
+  @media (max-width: 480px) {
+    padding: 0 10px;
+  }
+}
+
+.blinking-lights {
+  width: 12px;
+  height: 12px;
+  background-color: #00ff00; /* Bright green for the light */
+  border-radius: 50%;
+  animation: blink 1s infinite;
+
+  @media (max-width: 768px) {
+    width: 10px;
+    height: 10px;
+  }
+
+  @media (max-width: 480px) {
+    width: 8px;
+    height: 8px;
+  }
+}
+
+.gallery-text {
+  font-size: 20px;
+  
+  font-weight: bold;
+  color: #fff; /* White text for visibility */
+  text-transform: uppercase;
+
+  @media (max-width: 768px) {
+    font-size: 16px;
+  }
+
+  @media (max-width: 480px) {
+    font-size: 14px;
+  }
+}
+
+@keyframes blink {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+}
+
+/* Debug styles for cards - make them highly visible */
+.MuiCard-root {
+  min-height: 300px !important;
+  margin: 10px !important;
+  opacity: 1 !important;
+}
+
+
