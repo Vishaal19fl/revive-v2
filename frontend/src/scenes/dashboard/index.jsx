@@ -337,7 +337,7 @@ const handleClosePopup = () => setShowPopup(false);
 
       </Box>
       <Box display="grid" mb="20px" gap="20px">
-  <div className="marquee-section" style={{overflow:"hidden"}}>
+  <div className="marquee-section-1" style={{overflow:"hidden"}}>
   <div class="breaking-news-label">Breaking News</div>
   <Marquee className="marquee" autoFill speed={20}>
   <div className="text-gallery">
