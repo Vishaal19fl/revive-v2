@@ -1,4 +1,4 @@
-version: '3.8'
+version: "3.8"
 
 services:
   mongodb:
@@ -17,9 +17,10 @@ services:
     ports:
       - "8800:8800"
     environment:
-      - MONGO=mongodb://mongodb:27017/revive
-      # Add other environment variables from your backend/.env here if needed
-      # JWT_KEY=...
+      - MONGO=mongodb+srv://vishaal19:master19@cluster0.l7uzj3v.mongodb.net/?retryWrites=true&w=majority&dbname=gdsconey
+      - JWT_KEY=vishaalmongo19masterleodas
+      - VITE_UPLOAD_LINK="https://api.cloudinary.com/v1_1/dgrvwggvr/upload"
+      - REACT_APP_GEMINI_API_KEY='AIzaSyC2SyJOubllAJmEFaDvJ-rnDwKJYEUY5os'
     depends_on:
       - mongodb
     networks:
