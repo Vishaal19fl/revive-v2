@@ -101,18 +101,20 @@ style="height: 100%; min-height: 700px"
 frameborder="0"
 ></iframe> */}
 
-<iframe
+<div className="chat-container">
+  <iframe
 
-src="https://www.chatbase.co/chatbot-iframe/6ynm4ROqIvXaRqhAaXM12"
+src="https://www.chatbase.co/chatbot-iframe/Uh1MkeQDdqzGutsFmBgm-"
 
 width="100%"
 
-style={{ height: "100%", minHeight: "650px", width: "90%", borderRadius:"5px", boxShadow:"10%" }}
+style={{ height: "100%", minHeight: "600px", width: "90%", borderRadius:"5px", boxShadow:"10%" }}
 
 frameborder="0"
 ref={iframeRef}
 
 ></iframe>
+</div>
       <div className="black-bar"></div>
     </div>
   );

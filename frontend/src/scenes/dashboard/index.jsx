@@ -151,7 +151,7 @@ const handleClosePopup = () => setShowPopup(false);
   const donationCount = orders.length;
   const recentDonations = orders.slice(-6);
   const activeDisasters = ocrData.length;
-  const severeDisasters = ocrData.filter((item) => item.severity === "high").length;
+  const severeDisasters = ocrData.filter((item) => item.severity?.toLowerCase() === "high").length;
   const uniqueLocations = new Set(ocrData.map((item) => item.location)).size;
 
 
@@ -162,12 +162,19 @@ const handleClosePopup = () => setShowPopup(false);
       Low: 0,
     };
 
+    if (!data || !Array.isArray(data)) return [
+      { severity: "High", count: 0 },
+      { severity: "Medium", count: 0 },
+      { severity: "Low", count: 0 },
+    ];
+
     data.forEach((item) => {
-      if (item.severity === "high") {
+      const severity = item.severity ? item.severity.toLowerCase().trim() : "";
+      if (severity === "high") {
         counts.High++;
-      } else if (item.severity === "medium") {
+      } else if (severity === "medium") {
         counts.Medium++;
-      } else if (item.severity === "low") {
+      } else if (severity === "low") {
         counts.Low++;
       }
     });

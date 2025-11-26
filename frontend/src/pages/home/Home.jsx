@@ -98,7 +98,7 @@ function Home() {
       
       </div>}
       <NewsSlider />
-      <New />
+  
 
       {currentUser?.isLogistics &&<div className="donation-cards">
       <Slide slidesToShow={4} arrowsScroll={1}>

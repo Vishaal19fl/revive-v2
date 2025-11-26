@@ -23,76 +23,107 @@ import newRequest from '../../utils/newRequest';
 
 // Sample Disaster Progression Data
 const SAMPLE_DISASTER_PROGRESSION = [
-    {
-      date: '2024-07-29',
-      disasterType: 'Heavy Rainfall',
-      location: 'Wayanad, India',
-      progression: [
-        {
-          time: 'Evening',
-          details: 'Continuous monsoon rains caused water levels to rise, triggering localized flooding. Low-lying areas reported waterlogging, and rivers swelled dangerously, cutting off remote villages. Authorities issued warnings for potential landslides as the region received over 150 mm of rain within 12 hours.'
-        }
-      ],
-      severity: 'Medium',
-      affectedArea: '50 sq km'
-    },
-    {
-      date: '2024-07-30',
-      disasterType: 'Landslide',
-      location: 'Wayanad, India',
-      progression: [
-        {
-          time: 'Early Morning',
-          details: 'Landslides in Punjirimattom swept away homes and farmland. Chooralmala experienced flash floods, leaving over 200 families stranded and initial reports of 100 people missing.'
-        },
-        {
-          time: 'Afternoon',
-          details: 'Rescue teams faced challenges accessing the affected zones due to continuous rainfall and blocked roads.'
-        }
-      ],
-      severity: 'High',
-      affectedArea: '100 sq km'
-    },
-    {
-      date: '2024-07-31',
-      disasterType: 'Landslide',
-      location: 'Wayanad, India',
-      progression: [
-        {
-          time: 'Morning',
-          details: 'Search and rescue teams recovered more bodies, raising the death toll to 150. Over 200 people remained missing as heavy rains hampered operations. Relief camps were established for survivors.'
-        }
-      ],
-      severity: 'High',
-      affectedArea: '150 sq km'
-    },
-    {
-      date: '2024-08-01',
-      disasterType: 'Landslide',
-      location: 'Wayanad, India',
-      progression: [
-        {
-          time: 'Afternoon',
-          details: 'The death toll climbed to 220, with over 100 individuals still missing. Rescue efforts continued under challenging weather conditions, with food supplies air-dropped to remote areas.'
-        }
-      ],
-      severity: 'High',
-      affectedArea: '200 sq km'
-    },
-    {
-      date: '2024-08-02',
-      disasterType: 'Landslide',
-      location: 'Wayanad, India',
-      progression: [
-        {
-          time: 'Afternoon',
-          details: 'Relief operations intensified as rains subsided. The death toll rose to 320 as more bodies were recovered. Reconstruction plans were announced, prioritizing shelter and food distribution for displaced families.'
-        }
-      ],
-      severity: 'Medium',
-      affectedArea: '150 sq km'
-    }
-  ];
+  {
+    date: '2025-11-15',
+    disasterType: 'Air Pollution',
+    location: 'Delhi NCR, India',
+    progression: [
+      {
+        time: 'Morning',
+        details: 'Delhi AQI recorded at 380 (Very Poor category). Smog blanketed the city, reducing visibility to less than 200 meters. Health advisories issued for vulnerable groups including children and elderly. Schools advised to limit outdoor activities.'
+      }
+    ],
+    severity: 'High',
+    affectedArea: '1500 sq km'
+  },
+  {
+    date: '2025-11-18',
+    disasterType: 'Air Pollution Emergency',
+    location: 'Delhi NCR, India',
+    progression: [
+      {
+        time: 'Afternoon',
+        details: 'AQI spiked to severe levels at 428 in Delhi and 406 in Greater Noida - the worst day of November. CAQM activated emergency protocols under GRAP Stage 3. Ban on construction activities and restrictions on BS-III/IV diesel vehicles enforced.'
+      }
+    ],
+    severity: 'Severe',
+    affectedArea: '2000 sq km'
+  },
+  {
+    date: '2025-11-22',
+    disasterType: 'Air Pollution',
+    location: 'Delhi NCR, India',
+    progression: [
+      {
+        time: 'Morning',
+        details: 'CAQM revised GRAP schedule with stricter measures. AQI remained in Very Poor to Severe category (350-400 range). PMO directly monitoring pollution sources. Staggered office timings implemented for government offices to reduce peak-hour emissions.'
+      }
+    ],
+    severity: 'High',
+    affectedArea: '1800 sq km'
+  },
+  {
+    date: '2025-11-24',
+    disasterType: 'Air Pollution',
+    location: 'Delhi NCR, India',
+    progression: [
+      {
+        time: 'Morning',
+        details: 'Government mandated 50% work-from-home for offices under GRAP Stage 3. AQI recorded at 356. Residents staged protests near India Gate demanding immediate government action. Doctors advised people with lung or heart conditions to leave the city if possible.'
+      }
+    ],
+    severity: 'High',
+    affectedArea: '1700 sq km'
+  },
+  {
+    date: '2025-11-25',
+    disasterType: 'Pre-Cyclone Alert',
+    location: 'Chennai & Tamil Nadu, India',
+    progression: [
+      {
+        time: 'Evening',
+        details: 'IMD detected low-pressure area near Sri Lanka in the Bay of Bengal, expected to intensify into Cyclone Senyar. Yellow alert issued for Chennai, Tiruvallur, and Delta districts. Schools in Kanyakumari, Tirunelveli, Tenkasi, Thoothukudi, and Ramanathapuram declared closed for Nov 26-27 as precautionary measure.'
+      }
+    ],
+    severity: 'Medium',
+    affectedArea: '500 sq km'
+  },
+  {
+    date: '2025-11-26',
+    disasterType: 'Air Quality Improvement & Cyclone Watch',
+    location: 'Delhi NCR & Tamil Nadu, India',
+    progression: [
+      {
+        time: 'Morning',
+        details: 'Delhi AQI improved to 327 (Very Poor) as winds picked up. CAQM revoked GRAP Stage 3 measures but kept Stage 1 and 2 restrictions in force. Meanwhile, the depression near Sri Lanka intensified and began moving northwards toward Tamil Nadu coast.'
+      },
+      {
+        time: 'Evening',
+        details: 'IMD forecast continuous heavy rainfall for Chennai from Nov 28-Dec 1. Authorities prepared for potential flooding in low-lying areas. Fishermen advised not to venture into sea.'
+      }
+    ],
+    severity: 'Medium',
+    affectedArea: '2500 sq km'
+  },
+  {
+    date: '2025-11-27',
+    disasterType: 'Cyclone Formation',
+    location: 'Tamil Nadu & Puducherry, India',
+    progression: [
+      {
+        time: 'Morning',
+        details: 'Depression intensified into Cyclonic Storm Senyar over southwest Bay of Bengal. Wind speeds reached 50-60 kmph. Schools across Chennai, Kancheepuram, and Tiruvallur districts closed. NDRF teams deployed to coastal areas for precautionary measures.'
+      },
+      {
+        time: 'Afternoon',
+        details: 'IMD issued Orange alert for heavy to very heavy rainfall. Chennai Corporation activated emergency control rooms and deployed dewatering pumps in flood-prone zones. Residents in low-lying areas advised to move to relief centers.'
+      }
+    ],
+    severity: 'High',
+    affectedArea: '800 sq km'
+  }
+];
+
 
 const DisasterProgressionReport = () => {
   const [startDate, setStartDate] = useState(null);
@@ -136,8 +167,7 @@ const DisasterProgressionReport = () => {
   const generateProgressionPDF = () => {
     if (selectedProgression.length === 0) return;
 
-    const report = "The Wayanad district in Kerala, India, was struck by a devastating series of events beginning on July 29, 2024.  Unrelenting monsoon rains, exceeding 150 mm in 12 hours, caused alarmingly high water levels and saturated the soil. By evening, localized flooding was reported in low-lying areas, and streams and rivers swelled dangerously, isolating some villages.  Authorities issued warnings for potential landslides. The heavy rainfall continued into July 30, triggering multiple catastrophic landslides. The first landslide hit Punjirimattom, destroying homes and farmland.  A subsequent, more devastating landslide struck Chooralmala, resulting in flash floods in surrounding areas. Over 200 families were stranded as roads became impassable, and early reports indicated over 100 people were missing. Rescue efforts were immediately hampered by persistent rain and blocked roads.  On July 31, a full-scale search and rescue operation commenced in Punjirimattom and Chooralmala. The death toll climbed to 150, with over 200 still missing.  The ongoing rain and blocked roads severely hindered rescue operations, leaving survivors stranded and without basic supplies. Relief camps were established, but accessibility remained a significant challenge.  As rescue operations continued into August 1, under difficult weather conditions, the death toll tragically rose to 220, with more than 100 people still unaccounted for.  The relentless rain continued to impede rescue efforts, necessitating the expansion of relief camps and the air-dropping of food supplies to isolated communities.  The scale of the disaster prompted officials to describe the event as one of the most severe natural disasters in Kerala's recent history. The combined impact of heavy rainfall and subsequent landslides caused widespread destruction, loss of life, and significant disruption to the region.  The disaster highlighted the vulnerability of hill districts to extreme weather events and the challenges of conducting rescue operations in such difficult conditions.  The long-term recovery process is anticipated to be substantial, requiring significant resources and coordinated efforts from various agencies and organizations.";
-  
+    const report = "The National Capital Region of India faced a severe air quality crisis throughout November 2025, while simultaneously, Tamil Nadu and Puducherry braced for Cyclone Senyar. Beginning November 15, Delhi's Air Quality Index (AQI) reached hazardous levels at 380 (Very Poor category), with thick smog blanketing the city and reducing visibility to under 200 meters. Health advisories were immediately issued for vulnerable populations including children, elderly citizens, and those with respiratory conditions. Schools were instructed to limit outdoor activities as air pollution posed serious health risks. By November 18, the situation deteriorated dramatically as Delhi's AQI spiked to a catastrophic 428—the worst recorded day of the month—with neighboring areas like Greater Noida registering 406. The Commission for Air Quality Management (CAQM) activated emergency protocols under the Graded Response Action Plan (GRAP) Stage 3, enforcing strict bans on all construction and demolition activities, and imposing restrictions on BS-III and BS-IV diesel vehicles entering the capital. The severe pollution crisis prompted the Prime Minister's Office to directly monitor pollution sources and coordinate inter-departmental responses. On November 22, CAQM revised the GRAP schedule with even more stringent measures as AQI remained persistently between 350-400. Staggered office timings were implemented for government offices to reduce peak-hour vehicular emissions. By November 24, authorities mandated work-from-home for 50% of office staff across Delhi-NCR under GRAP Stage 3 protocols, with AQI recorded at 356. Frustrated residents staged protests near India Gate, demanding immediate and decisive government action to address the recurring pollution nightmare. Medical professionals advised patients with pre-existing lung or cardiovascular conditions to temporarily relocate if possible, highlighting the crisis's severity. Meanwhile, on November 25, a distinct meteorological threat emerged along India's southeastern coast. The India Meteorological Department (IMD) detected a low-pressure area forming near Sri Lanka in the Bay of Bengal, which was forecast to intensify into Cyclone Senyar. A yellow alert was promptly issued for Chennai, Tiruvallur, and Delta districts of Tamil Nadu. As a precautionary measure, district authorities declared school closures for November 26-27 across Kanyakumari, Tirunelveli, Tenkasi, Thoothukudi, and Ramanathapuram districts. On November 26, Delhi experienced marginal relief as wind patterns shifted, improving the AQI to 327 (Very Poor). CAQM revoked GRAP Stage 3 measures but maintained Stage 1 and 2 restrictions. Simultaneously, the depression near Sri Lanka intensified and began tracking northward toward the Tamil Nadu coast. IMD forecast continuous heavy rainfall for Chennai from November 28 through December 1, prompting authorities to prepare for potential urban flooding in historically vulnerable low-lying neighborhoods. Fishermen were strictly advised against venturing into the sea. By November 27, the depression officially intensified into Cyclonic Storm Senyar over the southwest Bay of Bengal, with wind speeds reaching 50-60 kmph."
     const doc = new jsPDF();
   
     // Government-style header

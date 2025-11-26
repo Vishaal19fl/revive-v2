@@ -15,12 +15,22 @@ const BarChart = ({ isDashboard = false, ocrData }) => {
       Low: 0,
     };
 
+    if (!data || !Array.isArray(data)) {
+        console.warn("BarChart: ocrData is missing or not an array", data);
+        return [
+            { severity: "High", count: 0, icon: "🔴", color: "#FF4444" },
+            { severity: "Medium", count: 0, icon: "🟠", color: "#FF8800" },
+            { severity: "Low", count: 0, icon: "🟢", color: "#00AA44" },
+        ];
+    }
+
     data.forEach((item) => {
-      if (item.severity === "high") {
+      const severity = item.severity ? item.severity.toLowerCase().trim() : "";
+      if (severity === "high") {
         counts.High++;
-      } else if (item.severity === "medium") {
+      } else if (severity === "medium") {
         counts.Medium++;
-      } else if (item.severity === "low") {
+      } else if (severity === "low") {
         counts.Low++;
       }
     });
@@ -29,19 +39,19 @@ const BarChart = ({ isDashboard = false, ocrData }) => {
       { 
         severity: "High", 
         count: counts.High,
-        icon: "",
+        icon: "🔴",
         color: "#FF4444"
       },
       { 
         severity: "Medium", 
         count: counts.Medium,
-        icon: "",
+        icon: "🟠",
         color: "#FF8800"
       },
       { 
         severity: "Low", 
         count: counts.Low,
-        icon: "",
+        icon: "🟢",
         color: "#00AA44"
       },
     ];
